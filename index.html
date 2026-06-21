@@ -1,637 +1,481 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Portfolio Dhiyan Iryadi - Network Engineering, Graphic Design, & Web Developer" />
-        <meta name="author" content="Dhiyan Iryadi" />
-        <title>Portfolio - Dhiyan Iryadi</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600" rel="stylesheet" type="text/css" />
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Portfolio Dhiyan Iryadi - Network Engineering, Graphic Design, & Web Developer" />
+    <title>Dhiyan Iryadi | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tambahkan ini di dalam <head>, setelah link Tailwind -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #10b981;
+        }
         
-        <style>
-            *, *::before, *::after { box-sizing: border-box; }
-            body {
-                background-color: #0d0e12;
-                color: #e2e8f0;
-                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-                letter-spacing: -0.01em;
-            }
-            
-            /* Typography & Modern Accents */
-            h1, h2, h3, h4, h5, h6 {
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 600;
-                color: #ffffff;
-                letter-spacing: -0.02em;
-            }
-            .text-muted { color: #94a3b8 !important; }
-            .text-accent { color: #10b981 !important; }
-            
-            /* Modern Section Divider */
-            .divider-custom {
-                margin: 1.5rem 0 2.5rem;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .divider-custom .divider-custom-line {
-                width: 40px;
-                height: 3px;
-                background-color: #10b981;
-                border-radius: 2px;
-            }
-            
-            /* Premium Navigation */
-            #mainNav {
-                background-color: rgba(13, 14, 18, 0.85);
-                backdrop-filter: blur(12px);
-                -webkit-backdrop-filter: blur(12px);
-                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-                padding-top: 1.2rem;
-                padding-bottom: 1.2rem;
-                transition: all 0.3s;
-            }
-            #mainNav .navbar-brand {
-                color: #ffffff;
-                font-weight: 700;
-                font-size: 1.1rem;
-                letter-spacing: 3px;
-            }
-            #mainNav .navbar-brand span {
-                color: #10b981;
-            }
-            #mainNav .navbar-nav li.nav-item a.nav-link {
-                color: #94a3b8;
-                font-size: 0.9rem;
-                font-weight: 500;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                padding: 0.5rem 1rem;
-            }
-            #mainNav .navbar-nav li.nav-item a.nav-link:hover,
-            #mainNav .navbar-nav li.nav-item a.nav-link.active {
-                color: #10b981;
-            }
-            
-            /* Corporate Hero Masthead */
-            header.masthead {
-                padding-top: calc(8rem + 80px);
-                padding-bottom: 7rem;
-                background: radial-gradient(circle at 50% 20%, #161922 0%, #0d0e12 100%);
-            }
-            header.masthead .masthead-heading {
-                font-size: 3rem;
-                font-weight: 700;
-                letter-spacing: -0.03em;
-                color: #ffffff;
-                margin-bottom: 0.5rem;
-            }
-            header.masthead .masthead-subheading {
-                font-size: 1.1rem;
-                color: #94a3b8;
-                font-weight: 400;
-                letter-spacing: 0.05em;
-                text-transform: uppercase;
-            }
-            .masthead-avatar {
-                width: 13rem;
-                height: 13rem;
-                object-fit: cover;
-                border: 1px solid rgba(16, 185, 129, 0.3);
-                border-radius: 50%;
-                padding: 6px;
-                background-color: #161820;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: #0a0a0c;
+            color: #e2e8f0;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
 
-            /* Clean Elegant Sections */
-            .page-section {
-                padding: 7rem 0;
-            }
-            .page-section-heading {
-                font-size: 2rem;
-                font-weight: 700;
-                letter-spacing: -0.02em;
-            }
-            .bg-light-dark {
-                background-color: #13151e;
-            }
-            
-            /* Elite Portfolio Grid Layout */
-            .portfolio .portfolio-item {
-                cursor: pointer;
-                position: relative;
-                display: block;
-                max-width: 26rem;
-                margin: 0 auto;
-                overflow: hidden;
-                border-radius: 12px;
-                border: 1px solid rgba(255, 255, 255, 0.05);
-                background-color: #161820;
-                transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            }
-            .portfolio .portfolio-item:hover {
-                transform: translateY(-6px);
-                border-color: rgba(16, 185, 129, 0.4);
-                box-shadow: 0 22px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.05);
-            }
-            .portfolio .portfolio-item .portfolio-item-caption {
-                position: absolute;
-                top: 0;
-                left: 0;
-                transition: all 0.3s ease;
-                opacity: 0;
-                background-color: rgba(13, 14, 18, 0.92);
-                border: 1px solid #10b981;
-                border-radius: 12px;
-            }
-            .portfolio .portfolio-item:hover .portfolio-item-caption {
-                opacity: 1;
-            }
-            .portfolio .portfolio-item .portfolio-item-caption .portfolio-item-caption-content {
-                font-size: 1.1rem;
-                font-weight: 500;
-                color: #10b981 !important;
-                letter-spacing: 0.5px;
-            }
-            
-            /* Professional Form Fields */
-            .floating-label-form-group {
-                position: relative;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-                padding-bottom: 0.5rem;
-                margin-bottom: 1.5rem;
-            }
-            .floating-label-form-group label {
-                color: #10b981;
-                font-size: 0.85rem;
-                font-weight: 500;
-            }
-            .floating-label-form-group input, .floating-label-form-group textarea {
-                background-color: transparent !important;
-                color: #ffffff !important;
-                border: none !important;
-                border-radius: 0;
-                padding-left: 0;
-                padding-right: 0;
-                font-size: 1.05rem;
-            }
-            .floating-label-form-group input:focus, .floating-label-form-group textarea:focus {
-                box-shadow: none !important;
-                border-bottom: 1px solid #10b981 !important;
-            }
-            
-            /* Elegant Buttons */
-            .btn-primary {
-                background-color: #10b981 !important;
-                border-color: #10b981 !important;
-                color: #0d0e12 !important;
-                font-weight: 600;
-                font-size: 0.95rem;
-                letter-spacing: 0.5px;
-                border-radius: 6px;
-                transition: all 0.3s;
-            }
-            .btn-primary:hover, .btn-primary:focus {
-                background-color: #059669 !important;
-                border-color: #059669 !important;
-                color: #ffffff !important;
-                box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2) !important;
-            }
-            .btn-xl {
-                padding: 0.9rem 2rem;
-            }
-            
-            /* Executive Footer */
-            .footer {
-                padding-top: 5rem;
-                padding-bottom: 5rem;
-                background-color: #090a0d !important;
-                border-top: 1px solid rgba(255, 255, 255, 0.05);
-            }
-            .footer h4 {
-                color: #ffffff;
-                font-size: 0.95rem;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                font-weight: 600;
-            }
-            .footer p {
-                color: #94a3b8;
-                font-size: 0.95rem;
-            }
-            .btn-social {
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                color: #94a3b8;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                width: 2.8rem;
-                height: 2.8rem;
-                border-radius: 8px;
-                background-color: #13151e;
-                transition: all 0.3s;
-                font-size: 0.95rem;
-            }
-            .btn-social:hover {
-                background-color: rgba(16, 185, 129, 0.1);
-                color: #10b981;
-                border-color: #10b981;
-            }
-            .copyright {
-                background-color: #060709 !important;
-                color: #64748b;
-                font-size: 0.85rem;
-                border-top: 1px solid rgba(255, 255, 255, 0.03);
-            }
+        .hero-bg {
+            background: radial-gradient(at center top, #1a1f2e 0%, #0a0a0c 70%);
+        }
 
-            /* Professional Modals Architecture */
-            .portfolio-modal .modal-content {
-                background-color: #13151e;
-                color: #e2e8f0;
-                border: 1px solid rgba(255, 255, 255, 0.08);
-                border-radius: 16px;
-            }
-            .portfolio-modal .close {
-                color: #94a3b8;
-                opacity: 0.7;
-                padding: 1.5rem;
-            }
-            .portfolio-modal .close:hover {
-                color: #ffffff;
-                opacity: 1;
-            }
-            .portfolio-modal p {
-                color: #94a3b8;
-                line-height: 1.7;
-                font-size: 1rem;
-            }
-            .portfolio-modal ul li {
-                color: #cbd5e0;
-                margin-bottom: 0.5rem;
-                font-size: 0.95rem;
-            }
-            .portfolio-modal .modal-body {
-                padding-top: 3rem;
-                padding-bottom: 4rem;
-            }
-        </style>
-    </head>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">PORTFOLIO<span>.</span></a>
-                <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold btn-primary text-dark rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="padding: 6px 12px; font-size: 0.8rem;">Menu</button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 js-scroll-trigger" href="#portfolio">Projects</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 js-scroll-trigger" href="#contact">Contact</a></li>
+        .portfolio-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(16 185 129 / 0.25);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .skill-bar {
+            height: 4px;
+            background: linear-gradient(to right, #10b981, #34d399);
+        }
+    </style>
+</head>
+
+<body class="bg-[#0a0a0c] text-slate-200">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-[#0a0a0c]/80 backdrop-blur-lg border-b   z-50">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter heading-font">
+                DH<span class="text-emerald-500">.</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#portfolio" class="nav-link hover:text-emerald-400 transition-colors">Projects</a>
+                <a href="#about" class="nav-link hover:text-emerald-400 transition-colors">About</a>
+                <a href="#contact" class="nav-link hover:text-emerald-400 transition-colors">Contact</a>
+            </div>
+            <a href="#contact" 
+               class="bg-emerald-500 hover:bg-emerald-600 text-black px-5 py-2.5 rounded-xl font-semibold text-sm transition-all">
+                Hire Me
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="inline-flex items-center gap-2 bg-white/5 px-4 py-2 rounded-3xl text-sm border  ">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    Available for freelance
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-bold leading-tight heading-font tracking-tighter">
+                    Dhiyan Iryadi
+                </h1>
+                <p class="text-2xl text-slate-400">
+                    Network Engineer • Full-Stack Developer • Creative Designer
+                </p>
+                
+                <p class="text-lg text-slate-400 max-w-md">
+                    Membuat solusi teknologi yang elegan, aman, dan user-friendly untuk pendidikan dan bisnis.
+                </p>
+
+                <div class="flex gap-4">
+                    <a href="#portfolio" 
+                     class="bg-emerald-500 text-black px-8 py-4 rounded-2xl font-semibold flex items-center gap-2 hover:bg-emerald-400 transition-all">
+                        <i class="fas fa-briefcase"></i> Lihat Projects
+                    </a>
+                    <a href="#contact" 
+                     class="border border-white/30 hover:border-emerald-500 px-8 py-4 rounded-2xl font-medium transition-all">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <img src="assets/img/dyn.jpg" 
+                     alt="Dhiyan Iryadi"
+                     class="w-80 h-80 object-cover rounded-3xl border-4 border-emerald-500/20 shadow-2xl shadow-emerald-500/10">
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio -->
+<!-- Portfolio Section - Lengkap 6 Proyek -->
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio" class="py-24 bg-[#0f1119]">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold heading-font tracking-tight mb-3">Featured Projects</h2>
+            <p class="text-slate-400 text-lg">6 proyek terbaik yang telah saya kerjakan</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Proyek 1 -->
+            <div onclick="showModal('portfolioModal7')" class="portfolio-card group bg-[#161820] rounded-3xl overflow-hidden border   cursor-pointer hover:border-emerald-500/30">
+                <img src="assets/img/portfolio/exambrowser_native.png" class="w-full h-56 object-cover transition-all group-hover:scale-105" alt="">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl mb-2">ExamBrowser Android Native</h3>
+                    <p class="text-slate-400 text-sm line-clamp-3">Aplikasi ujian berbasis Android dengan fitur keamanan tingkat tinggi.</p>
+                </div>
+            </div>
+
+            <!-- Proyek 2 -->
+            <div onclick="showModal('portfolioModal1')" class="portfolio-card group bg-[#161820] rounded-3xl overflow-hidden border   cursor-pointer hover:border-emerald-500/30">
+                <img src="assets/img/portfolio/ta_ku.png" class="w-full h-56 object-cover transition-all group-hover:scale-105" alt="">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl mb-2">Sistem Bank Mini IQTI</h3>
+                    <p class="text-slate-400 text-sm line-clamp-3">Aplikasi mobile banking + sistem admin berbasis web.</p>
+                </div>
+            </div>
+
+            <!-- Proyek 3 -->
+            <div onclick="showModal('portfolioModal2')" class="portfolio-card group bg-[#161820] rounded-3xl overflow-hidden border   cursor-pointer hover:border-emerald-500/30">
+                <img src="assets/img/portfolio/ppdb2020.JPG" class="w-full h-56 object-cover transition-all group-hover:scale-105" alt="">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl mb-2">Sistem PPDB 2020</h3>
+                    <p class="text-slate-400 text-sm line-clamp-3">Sistem Penerimaan Peserta Didik Baru lengkap.</p>
+                </div>
+            </div>
+
+            <!-- Proyek 4 -->
+            <div onclick="showModal('portfolioModal6')" class="portfolio-card group bg-[#161820] rounded-3xl overflow-hidden border   cursor-pointer hover:border-emerald-500/30">
+                <img src="assets/img/portfolio/ppdb_daftarulang.png" class="w-full h-56 object-cover transition-all group-hover:scale-105" alt="">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl mb-2">Web Daftar Ulang PPDB</h3>
+                    <p class="text-slate-400 text-sm line-clamp-3">Sistem administrasi daftar ulang dengan centralized database.</p>
+                </div>
+            </div>
+
+            <!-- Proyek 5 -->
+            <div onclick="showModal('portfolioModal4')" class="portfolio-card group bg-[#161820] rounded-3xl overflow-hidden border   cursor-pointer hover:border-emerald-500/30">
+                <img src="assets/img/portfolio/ppdb_monitor_android.png" class="w-full h-56 object-cover transition-all group-hover:scale-105" alt="">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl mb-2">Monitoring PPDB Android</h3>
+                    <p class="text-slate-400 text-sm line-clamp-3">Aplikasi monitoring real-time pendaftaran siswa.</p>
+                </div>
+            </div>
+
+            <!-- Proyek 6 -->
+            <div onclick="showModal('portfolioModal5')" class="portfolio-card group bg-[#161820] rounded-3xl overflow-hidden border   cursor-pointer hover:border-emerald-500/30">
+                <img src="assets/img/portfolio/ppdb_calonsiswa.png" class="w-full h-56 object-cover transition-all group-hover:scale-105" alt="">
+                <div class="p-6">
+                    <h3 class="font-semibold text-xl mb-2">Web Portal Calon Siswa</h3>
+                    <p class="text-slate-400 text-sm line-clamp-3">Portal pendaftaran dan tracking status calon siswa.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- About -->
+    <section id="about" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-5">
+                    <h2 class="text-4xl font-bold heading-font tracking-tight mb-8">Tentang Saya</h2>
+                    <div class="space-y-6 text-slate-300 leading-relaxed">
+                        <p>Saya adalah praktisi IT yang passionate di bidang Network Engineering, Full-Stack Development, dan Graphic Design.</p>
+                        <p>Berpengalaman membangun sistem informasi pendidikan dan solusi teknologi yang aman serta user-friendly.</p>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7">
+                    <h3 class="uppercase text-sm tracking-widest text-emerald-400 mb-6">Core Skills</h3>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <p class="mb-3 font-medium">Network & Infrastructure</p>
+                            <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="skill-bar w-[90%]"></div></div>
+                        </div>
+                        <div>
+                            <p class="mb-3 font-medium">Web Development</p>
+                            <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="skill-bar w-[95%]"></div></div>
+                        </div>
+                        <div>
+                            <p class="mb-3 font-medium">Mobile Development</p>
+                            <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="skill-bar w-[85%]"></div></div>
+                        </div>
+                        <div>
+                            <p class="mb-3 font-medium">UI/UX & Design</p>
+                            <div class="h-1.5 bg-white/10 rounded-full overflow-hidden"><div class="skill-bar w-[80%]"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+<!-- Contact Section -->
+<section id="contact" class="py-24 bg-[#0f1119]">
+    <div class="max-w-2xl mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-5xl font-bold heading-font tracking-tight mb-3">Mari Berkolaborasi</h2>
+            <p class="text-slate-400 text-lg">Saya terbuka untuk proyek baru dan kesempatan kolaborasi.</p>
+        </div>
+        
+        <form id="contactForm" action="https://formspree.io/f/mjgqbrkk" method="POST" class="space-y-8">
+            <div class="grid md:grid-cols-2 gap-6">
+                <input type="text" name="name" placeholder="Nama Lengkap" 
+                       class="bg-white/5 border   focus:border-emerald-500 rounded-2xl px-6 py-4 outline-none transition-all" required>
+                
+                <input type="email" name="email" placeholder="Email Anda" 
+                       class="bg-white/5 border   focus:border-emerald-500 rounded-2xl px-6 py-4 outline-none transition-all" required>
+            </div>
+            
+            <input type="text" name="subject" placeholder="Subjek" 
+                   class="w-full bg-white/5 border   focus:border-emerald-500 rounded-2xl px-6 py-4 outline-none transition-all">
+            
+            <textarea name="message" rows="6" placeholder="Pesan Anda..." 
+                      class="w-full bg-white/5 border   focus:border-emerald-500 rounded-3xl px-6 py-5 outline-none resize-none" required></textarea>
+            
+            <button type="submit" 
+                    class="w-full bg-emerald-500 hover:bg-emerald-600 text-black font-semibold py-5 rounded-2xl transition-all flex items-center justify-center gap-2">
+                <i class="fas fa-paper-plane"></i> Kirim Pesan
+            </button>
+        </form>
+        
+        <p class="text-center text-slate-500 text-sm mt-6">
+            Atau langsung email ke: <a href="mailto:emailanda@gmail.com" class="text-emerald-400 hover:underline">dhiyan.iryadi@gmail.com</a>
+        </p>
+    </div>
+</section>
+
+<!-- ==================== SEMUA MODALS ==================== -->
+
+<!-- Modal 7: ExamBrowser -->
+<div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content bg-[#161820] text-slate-200 border   rounded-3xl">
+            <button class="close absolute top-6 right-6 text-3xl text-slate-400 hover:text-white z-10" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body p-8 md:p-12">
+                <div class="max-w-3xl mx-auto">
+                    <h4 class="text-3xl font-bold heading-font mb-6">EXAMBROWSER APPLICATION SYSTEMS BERBASIS ANDROID NATIVE</h4>
+                    <img class="img-fluid rounded-2xl mb-8 w-full" src="assets/img/portfolio/exambrowser_native.png" alt="ExamBrowser">
+                    
+                    <p class="text-slate-300 leading-relaxed mb-6">Merancang dan membangun aplikasi <strong>ExamBrowser</strong> tangguh berskala native mobile architecture menggunakan Android Studio (Java/Kotlin).</p>
+                    <p class="text-slate-300 leading-relaxed mb-8">Solusi ini di-deploy khusus sebagai infrastruktur penunjang pelaksanaan ujian semester siswa berbasis smartphone.</p>
+
+                    <h5 class="text-emerald-400 font-semibold mb-4">Fitur Keamanan Utama:</h5>
+                    <ul class="list-disc pl-6 space-y-3 text-slate-300">
+                        <li><strong>Screen-Pinning Engine</strong> - Kiosk Mode (mengunci layar penuh)</li>
+                        <li><strong>Anti-Screen Capture Protection</strong> - Memblokir screenshot & screen recording</li>
+                        <li><strong>Smart Link Validation</strong> - Render halaman CBT di sandbox environment</li>
+                        <li><strong>Hardware Control</strong> - Menonaktifkan tombol Home, Recent Apps, dll</li>
+                        <li><strong>Active Deployment</strong> - Masih digunakan sampai sekarang di sekolah</li>
                     </ul>
-                </div>
-            </div>
-        </nav>
-        
-        <header class="masthead text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <img class="masthead-avatar mb-4" src="assets/img/dyn.jpg" alt="Dhiyan Iryadi Portfolio" />
-                <h1 class="masthead-heading text-uppercase">DHIYAN IRYADI</h1>
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <p class="masthead-subheading mb-0">Network Engineering &nbsp;&bull;&nbsp; Graphic Design &nbsp;&bull;&nbsp; Web Developer</p>
-            </div>
-        </header>
-        
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase mb-0">Featured Projects</h2>
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#portfolioModal7">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center"><i class="fas fa-eye mr-2"></i> View Case Study</div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/exambrowser_native.png" alt="ExamBrowser Android Native" />
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center"><i class="fas fa-eye mr-2"></i> View Case Study</div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/ta_ku.png" alt="Bank Mini" />
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center"><i class="fas fa-eye mr-2"></i> View Case Study</div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/ppdb2020.JPG" alt="PPDB Core System" />
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center"><i class="fas fa-eye mr-2"></i> View Case Study</div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/ppdb_daftarulang.png" alt="Web Daftar Ulang PPDB" />
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#portfolioModal4">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center"><i class="fas fa-eye mr-2"></i> View Case Study</div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/ppdb_monitor_android.png" alt="Monitoring PPDB Android" />
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item" data-toggle="modal" data-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center"><i class="fas fa-eye mr-2"></i> View Case Study</div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/ppdb_calonsiswa.png" alt="Web Portal Calon Siswa" />
-                        </div>
-                    </div>
 
+                    <button class="btn btn-primary mt-10 px-8 py-3" data-dismiss="modal">Tutup Project</button>
                 </div>
             </div>
-        </section>
-        
-        <section class="page-section bg-light-dark mb-0" id="about">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase text-white">About Me</h2>
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row">
-                    <!-- Kolom Kiri: Fokus Teknis & Keahlian -->
-                    <div class="col-lg-5 ml-auto">
-                        <p class="lead" style="line-height: 1.7; font-size: 1.05rem; color: #cbd5e0;">
-                            Saya adalah seorang praktisi IT dan pendidik yang berfokus pada pengembangan aplikasi web full-stack dan manajemen infrastruktur jaringan. Berpengalaman dalam membangun sistem berbasis PHP dengan framework CodeIgniter, serta mengonfigurasi lingkungan server Linux (Debian CLI) dan DNS management untuk kebutuhan lokal maupun intranet secara efisien dan aman.
-                        </p>
-                    </div>
-                    <!-- Kolom Kanan: Pendekatan Kerja & Visi -->
-                    <div class="col-lg-5 mr-auto">
-                        <p class="lead" style="line-height: 1.7; font-size: 1.05rem; color: #cbd5e0;">
-                            Dalam setiap proyek dan proses pembelajaran, saya selalu menerapkan pendekatan berbasis masalah (Problem-Based Learning) untuk menghasilkan solusi teknologi yang tepat guna. Kombinasi keahlian teknis dan pengalaman instruksional ini memungkinkan saya menjembatani kebutuhan sistem yang kompleks menjadi aplikasi yang adaptif dan mudah diakses oleh pengguna.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="page-section" id="contact">
-            <div class="container">
-                <h2 class="page-section-heading text-center text-uppercase mb-0">Get In Touch</h2>
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-7 mx-auto">
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Name</label>
-                                    <input class="form-control" id="name" type="text" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name." />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Email Address</label>
-                                    <input class="form-control" id="email" type="text" placeholder="Your Email Address" required="required" data-validation-required-message="Please enter your email address." />
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <label>Message</label>
-                                    <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required="required" data-validation-required-message="Please enter a message."></textarea>
-                                </div>
-                            </div>
-                            <br />
-                            <div id="success"></div>
-                            <div class="form-group mt-3"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Submit Message</button></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <footer class="footer text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 mb-5 mb-lg-0 text-lg-left">
-                        <h4 class="mb-4">Location</h4>
-                        <p class="mb-0 font-weight-light" style="line-height: 1.7;">
-                            Wiradesa, Pekalongan<br />
-                            Jawa Tengah, Indonesia <br />
-                            <span class="text-accent">Postal Code 51152</span>
-                        </p>
-                    </div>
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="mb-4">Connect</h4>
-                        <a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-github"></i></a>
-                        <a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-social mx-1" href="#!"><i class="fab fa-fw fa-instagram"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-right">
-                        <h4 class="mb-4">Core Expertise</h4>
-                        <p class="mb-0 font-weight-light" style="line-height: 1.7; text-align: justify; text-justify: inter-word;">
-                            Berfokus pada penyediaan solusi teknologi terintegrasi lewat kompetensi mumpuni di bidang <span class="text-accent">Network Architecture</span>, rekayasa aplikasi berskala sistem informasi korporat/pendidikan (<span class="text-accent">Web & Mobile Application</span>), serta komparasi estetika fungsional melalui <span class="text-accent">Graphic Design</span>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
-        <div class="copyright py-4 text-center">
-            <div class="container"><small class="font-weight-light" style="letter-spacing: 0.5px;">&copy; 2026 iryadidyan.github.io. All rights reserved.</small></div>
         </div>
+    </div>
+</div>
+
+<!-- Modal 1: Bank Mini -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content bg-[#161820] text-slate-200 border   rounded-3xl">
+            <button class="close absolute top-6 right-6 text-3xl text-slate-400 hover:text-white z-10" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+            </button>
+<div class="modal-body p-8 md:p-12">
+    <div class="max-w-3xl mx-auto">
+        <h4 class="text-3xl font-bold heading-font mb-6">SISTEM INFORMASI BANK MINI IQTI BERBASIS ANDROID</h4>
         
-        <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h4 class="text-uppercase mb-0">EXAMBROWSER APPLICATION SYSTEMS BERBASIS ANDROID NATIVE</h4>
-                                    <div class="divider-custom"><div class="divider-custom-line"></div></div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/exambrowser_native.png" alt="ExamBrowser Android Studio" />
-                                    <p style="text-align: justify;">Merancang dan membangun aplikasi **ExamBrowser** tangguh berskala *native mobile architecture* menggunakan lingkungan **Android Studio (Java/Kotlin)**. Solusi ini di-deploy khusus sebagai infrastruktur penunjang pelaksanaan agenda evaluasi belajar (Ulangan Semester) siswa berbasis perangkat *smartphone/handphone*.</p>
-                                    <p style="text-align: justify;">Aplikasi ini mengintegrasikan protokol manajemen keamanan terpusat untuk meminimalisir potensi kecurangan akademis secara presisi selama ujian berlangsung.</p>
-                                    <p style="text-align: left;" class="text-accent font-weight-bold">Fitur Keamanan Korporat & Keunggulan Sistem:</p>
-<ul class="text-left pl-4">
-                                        <li>**Screen-Pinning Engine:** Mengunci layar secara penuh (*Kiosk Mode*) untuk mencegah siswa berpindah ke aplikasi lain, membuka peramban web luar, ataupun membuka catatan dokumen.</li>
-                                        <li>**Anti-Screen Capture Protection:** Memblokir seluruh fungsionalitas perintah pintas tangkapan layar (*screenshot*) dan perekaman layar (*screen recording*) melalui kontrol level sistem internal.</li>
-                                        <li>**Smart Link Validation & Render Engine:** Memuat halaman server Computer Based Test (CBT) sekolah secara responsif, stabil, dan terisolasi penuh di dalam *sandbox environment*.</li>
-                                        <li>**Hardware Control Management:** Menonaktifkan akses tombol navigasi bawaan perangkat keras (seperti tombol *Home*, *Recent Apps*, dan fungsi pembagian layar/*split screen*) selama sesi pengerjaan ujian aktif.</li>
-                                        <li>**Active Deployment Status:** Hingga saat ini, sistem aplikasi ini masih aktif diimplementasikan secara berkelanjutan di lingkungan internal sekolah untuk menjamin integritas pelaksanaan evaluasi belajar di setiap semester.</li>
-                                    </ul>                                 
-                                    <button class="btn btn-primary mt-4" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Close Project</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <img class="img-fluid rounded-2xl mb-8 w-full" 
+             src="assets/img/portfolio/ta_ku.png" 
+             alt="Sistem Bank Mini IQTI">
+
+        <p class="text-slate-300 leading-relaxed mb-6">
+            Membangun sistem informasi manajemen nasabah berbasis Android yang dirancang untuk menyajikan informasi saldo secara real-time, push notification transaksi, detail informasi akun, serta fitur transfer antar-nasabah secara instan.
+        </p>
+        
+        <p class="text-slate-300 leading-relaxed mb-6">
+            Sistem ini mengintegrasikan panel admin berbasis web menggunakan <strong>CodeIgniter</strong> (PHP Framework), <strong>jQuery</strong>, dan <strong>MySQL</strong> sebagai basis data terpusat, serta ditenagai oleh <strong>Ionic Framework</strong> pada sisi aplikasi Android.
+        </p>
+        
+        <p class="text-slate-300 leading-relaxed mb-8">
+            Sistem mencakup fungsionalitas utama seperti pendaftaran nasabah baru, pencatatan transaksi menabung (debit/kredit), hingga pembuatan laporan keuangan secara otomatis.
+        </p>
+
+        <div class="bg-emerald-900/30 border border-emerald-500/20 rounded-2xl p-5 text-sm">
+            <p class="text-emerald-400 font-medium">Catatan Proyek:</p>
+            <p class="text-slate-400">
+                Proyek ini merupakan aplikasi pertama yang saya rancang dan sukses dideploy sebagai Tugas Akhir (TA) pada tahun 2019. 
+                Saat ini, masa operasional dan akses ke server demonstrasi sistem telah resmi ditutup.
+            </p>
         </div>
 
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-<div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h4 class="text-uppercase mb-0">SISTEM INFORMASI BANK MINI IQTI BERBASIS ANDROID</h4>
-                                    <div class="divider-custom"><div class="divider-custom-line"></div></div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/ta_ku.png" alt="Sistem Informasi Bank Mini IQTI" />
-                                    
-                                    <p style="text-align: justify;">
-                                        Membangun sistem informasi manajemen nasabah berbasis Android yang dirancang untuk menyajikan informasi saldo secara real-time, push notification transaksi, detail informasi akun, serta fitur transfer antar-nasabah secara instan.
-                                    </p>
-                                    <p style="text-align: justify;">
-                                        Sistem ini mengintegrasikan panel admin berbasis web menggunakan <strong>CodeIgniter (PHP Framework)</strong>, <strong>jQuery</strong>, dan <strong>MySQL</strong> sebagai basis data terpusat, serta ditenagai oleh <strong>Ionic Framework</strong> pada sisi aplikasi Android-nya. Sistem mencakup fungsionalitas utama seperti pendaftaran nasabah baru, pencatatan transaksi menabung (debit/kredit), hingga pembuatan laporan keuangan secara otomatis.
-                                    </p>
-                                    <p style="text-align: justify; font-style: italic; color: #a0aec0;">
-                                        *Proyek ini merupakan aplikasi pertama yang saya rancang dan sukses dideploy sebagai Tugas Akhir (TA) pada tahun 2019. Saat ini, masa operasional dan akses ke server demonstrasi sistem telah resmi ditutup.
-                                    </p>
-                                    
-                                    <button class="btn btn-primary mt-4" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Close Project</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <button class="mt-10 px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-black font-semibold rounded-2xl transition-all" 
+                data-dismiss="modal">
+            Tutup Project
+        </button>
+    </div>
+</div>
         </div>
-        
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h4 class="text-uppercase mb-0">Sistem informasi PPDB 2020</h4>
-                                    <div class="divider-custom"><div class="divider-custom-line"></div></div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/ppdb2020.JPG" alt="" />
-                                    <p style="text-align: justify;">Software ini telah digunakan di SMK Maarif NU Tirto dan berjalan lancar. pembuat aplikasi ini ialah R. Anggit Herdianto anda bisa mendownload nya di: <a href="http://github.com/AnggitHerdianto" target="_BLANK" class="text-accent">http://github.com/AnggitHerdianto</a>. Aplikasi ini melingkupi pendaftaran siswa baru, pengecekan data siswa, pengaturan jadwal pendaftaran, serta manajemen hak akses admin & superadmin.</p>
-                                    <p style="text-align: left;" class="text-accent font-weight-bold">Pengembangan & Optimalisasi Fitur Custom:</p>
-                                    <ul class="text-left pl-4">
-                                        <li>Arsitektur & perbaikan core bug sistem autentikasi logout.</li>
-                                        <li>Integrasi visualisasi analitik grafik statistika kompetensi keahlian diminati.</li>
-                                        <li>Refaktor tabel database relasional (Nama Panggilan menjadi NIK).</li>
-                                        <li>Sinkronisasi integrasi schema database ke sistem pelaporan ekspor data siswa.</li>
-                                        <li>Penyediaan modul cetak formulir pendaftaran fisik & cetak bukti pendaftaran digital.</li>
-                                        <li>Implementasi UI micro-interaction engine menggunakan SweetAlert library.</li>
-                                    </ul>                                   
-                                    <button class="btn btn-primary mt-4" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Close Project</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h4 class="text-uppercase mb-0">Web Aplikasi Daftar Ulang PPDB</h4>
-                                    <div class="divider-custom"><div class="divider-custom-line"></div></div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/ppdb_daftarulang.png" alt="" />
-                                    <p style="text-align: justify;">Aplikasi administrasi berbasis jaringan web berkinerja tinggi yang beroperasi menggunakan *Centralized Database Strategy* bersumber dari basis data PPDB inti. Berfungsi secara fungsional untuk mengotomatisasi proses birokrasi pendaftar yang lolos seleksi; mengarsip validasi kelengkapan dokumen berkas fisik ke digital, konfigurasi formulir lanjutan tingkat institusi, serta manajemen status registrasi ulang tanpa adanya redundansi data (*zero data entry repetition*).</p>
-                                    <button class="btn btn-primary mt-4" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Close Project</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h4 class="text-uppercase mb-0">Aplikasi Monitoring PPDB Berbasis Android</h4>
-                                    <div class="divider-custom"><div class="divider-custom-line"></div></div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/ppdb_monitor_android.png" alt="" />
-                                    <p style="text-align: justify;">Aplikasi Android mobile komprehensif yang di-deploy menggunakan ekosistem <strong>Kodular</strong>. Aplikasi ini dirancang khusus bagi jajaran manajemen dan panitia pelaksana guna melakukan pemantauan matrikulasi metrics pendaftaran secara langsung (*real-time data acquisition*) bersandar pada komparasi statistik preferensi jurusan, langsung dari genggaman eksekutif.</p>
-                                    <button class="btn btn-primary mt-4" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Close Project</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <h4 class="text-uppercase mb-0">Web Portal Calon Siswa (Terintegrasi)</h4>
-                                    <div class="divider-custom"><div class="divider-custom-line"></div></div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/ppdb_calonsiswa.png" alt="" />
-                                    <p style="text-align: justify;">Pengembangan aplikasi modul web *front-facing* siswa yang berinteraksi langsung (*seamless database sync*) dengan core engine sistem informasi PPDB utama. Solusi arsitektur digital ini ditujukan penuh untuk mengarsiteki kemandirian entri data personal calon siswa, validasi berkas portofolio persyaratan, pelacakan proses seleksi, hingga gerbang transparansi kelulusan pendaftaran.</p>
-                                    <button class="btn btn-primary mt-4" data-dismiss="modal"><i class="fas fa-times mr-2"></i>Close Project</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
+    </div>
+</div>
 
+<!-- Modal 2: PPDB 2020 -->
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content bg-[#161820] text-slate-200 border   rounded-3xl">
+            <button class="close absolute top-6 right-6 text-3xl text-slate-400 hover:text-white z-10" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+            </button>
+<div class="modal-body p-8 md:p-12">
+    <div class="max-w-3xl mx-auto">
+        <h4 class="text-3xl font-bold heading-font mb-6">SISTEM INFORMASI PPDB 2020</h4>
+        
+        <img class="img-fluid rounded-2xl mb-8 w-full" 
+             src="assets/img/portfolio/ppdb2020.JPG" 
+             alt="Sistem PPDB 2020">
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+        <p class="text-slate-300 leading-relaxed mb-6">
+            Software ini telah digunakan di <strong>SMK Maarif NU Tirto</strong> dan berjalan lancar hingga saat ini.
+        </p>
+        
+        <p class="text-slate-300 leading-relaxed mb-6">
+            Aplikasi ini mencakup proses pendaftaran siswa baru, pengecekan data siswa, pengaturan jadwal pendaftaran, serta manajemen hak akses admin dan superadmin.
+        </p>
+
+        <h5 class="text-emerald-400 font-semibold mb-4 mt-8">Pengembangan & Optimalisasi Fitur Custom:</h5>
+        <ul class="list-disc pl-6 space-y-3 text-slate-300">
+            <li>Perbaikan arsitektur dan core bug sistem autentikasi logout.</li>
+            <li>Integrasi visualisasi analitik grafik statistika kompetensi keahlian yang diminati.</li>
+            <li>Refaktor tabel database relasional (perubahan Nama Panggilan menjadi NIK).</li>
+            <li>Sinkronisasi integrasi schema database dengan sistem pelaporan dan ekspor data siswa.</li>
+            <li>Penyediaan modul cetak formulir pendaftaran fisik dan bukti pendaftaran digital.</li>
+            <li>Implementasi UI micro-interaction menggunakan <strong>SweetAlert</strong> library.</li>
+        </ul>
+
+        <div class="bg-emerald-900/30 border border-emerald-500/20 rounded-2xl p-5 mt-8 text-sm">
+            <p class="text-emerald-400 font-medium">Catatan:</p>
+            <p class="text-slate-400">
+                Aplikasi ini dikembangkan oleh <strong>R. Anggit Herdianto</strong>. 
+                Anda dapat melihat repository asli di: 
+                <a href="https://github.com/AnggitHerdianto" target="_blank" class="text-emerald-400 hover:underline">github.com/AnggitHerdianto</a>
+            </p>
+        </div>
+
+        <button class="mt-10 px-8 py-3 bg-emerald-500 hover:bg-emerald-600 text-black font-semibold rounded-2xl transition-all" 
+                data-dismiss="modal">
+            Tutup Project
+        </button>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 6: Daftar Ulang -->
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content bg-[#161820] text-slate-200 border   rounded-3xl">
+            <button class="close absolute top-6 right-6 text-3xl text-slate-400 hover:text-white z-10" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body p-8 md:p-12">
+                <div class="max-w-3xl mx-auto">
+                    <h4 class="text-3xl font-bold heading-font mb-6">Web Aplikasi Daftar Ulang PPDB</h4>
+                    <img class="img-fluid rounded-2xl mb-8 w-full" src="assets/img/portfolio/ppdb_daftarulang.png" alt="Daftar Ulang">
+                    <p class="text-slate-300 leading-relaxed">Aplikasi administrasi daftar ulang dengan centralized database strategy. Mengotomatisasi proses validasi dokumen dan manajemen status registrasi tanpa redundansi data.</p>
+                    <button class="btn btn-primary mt-10 px-8 py-3" data-dismiss="modal">Tutup Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4: Monitoring Android -->
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content bg-[#161820] text-slate-200 border   rounded-3xl">
+            <button class="close absolute top-6 right-6 text-3xl text-slate-400 hover:text-white z-10" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body p-8 md:p-12">
+                <div class="max-w-3xl mx-auto">
+                    <h4 class="text-3xl font-bold heading-font mb-6">Aplikasi Monitoring PPDB Berbasis Android</h4>
+                    <img class="img-fluid rounded-2xl mb-8 w-full" src="assets/img/portfolio/ppdb_monitor_android.png" alt="Monitoring">
+                    <p class="text-slate-300 leading-relaxed">Aplikasi mobile menggunakan Kodular untuk memantau statistik pendaftaran secara real-time bagi panitia dan manajemen sekolah.</p>
+                    <button class="btn btn-primary mt-10 px-8 py-3" data-dismiss="modal">Tutup Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 5: Portal Calon Siswa -->
+<div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content bg-[#161820] text-slate-200 border   rounded-3xl">
+            <button class="close absolute top-6 right-6 text-3xl text-slate-400 hover:text-white z-10" data-dismiss="modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body p-8 md:p-12">
+                <div class="max-w-3xl mx-auto">
+                    <h4 class="text-3xl font-bold heading-font mb-6">Web Portal Calon Siswa (Terintegrasi)</h4>
+                    <img class="img-fluid rounded-2xl mb-8 w-full" src="assets/img/portfolio/ppdb_calonsiswa.png" alt="Portal Calon Siswa">
+                    <p class="text-slate-300 leading-relaxed">Portal front-facing untuk calon siswa melakukan pelacakan proses seleksi</p>
+                    <button class="btn btn-primary mt-10 px-8 py-3" data-dismiss="modal">Tutup Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t  ">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-slate-500">© 2026 Dhiyan Iryadi • All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- jQuery + Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Tailwind config
+        tailwind.config = { content: [] };
+
+        // Fungsi Modal
+        function showModal(modalId) {
+            $('#' + modalId).modal('show');
+        }
+    </script>
+</body>
 </html>
